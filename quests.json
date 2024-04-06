@@ -1,0 +1,184 @@
+[
+  {
+    "name": "Daily Divination",
+    "minimumLevel": 80,
+    "startingNPC": "Tanis Ka",
+    "requirements": "",
+    "isComplete": false
+  },
+  {
+    "name": "Vile Spirits",
+    "minimumLevel": 30,
+    "startingNPC": "Faction Herald",
+    "requirements": "",
+    "isComplete": false
+  },
+  {
+    "name": "Dispel The Curse",
+    "minimumLevel": 30,
+    "startingNPC": "Special Ops Agent",
+    "requirements": "",
+    "isComplete": false
+  },
+  {
+    "name": "Celestial Mount",
+    "minimumLevel": 60,
+    "startingNPC": "Wonderland Fair",
+    "requirements": "Fair Ticket",
+    "isComplete": false
+  },
+  {
+    "name": "Golden Touch",
+    "minimumLevel": 60,
+    "startingNPC": "Wonderland Fair",
+    "requirements": "Fair Ticket",
+    "isComplete": false
+  },
+  {
+    "name": "Getting Home",
+    "minimumLevel": 60,
+    "startingNPC": "Wonderland Fair",
+    "requirements": "Fair Ticket",
+    "isComplete": false
+  },
+  {
+    "name": "Stolen Gold",
+    "minimumLevel": 120,
+    "startingNPC": "Wonderland Fair",
+    "requirements": "Fair Ticket",
+    "isComplete": false
+  },
+  {
+    "name": "Rock Paper Scissors",
+    "minimumLevel": 120,
+    "startingNPC": "Wonderland Fair",
+    "requirements": "Fair Ticket",
+    "isComplete": false
+  },
+  {
+    "name": "Missing Yasho",
+    "minimumLevel": 120,
+    "startingNPC": "Wonderland Fair",
+    "requirements": "Fair Ticket",
+    "isComplete": false
+  },
+  {
+    "name": "Sky Dweller",
+    "minimumLevel": 45,
+    "startingNPC": "Sky Dweller",
+    "requirements": "Skyblade",
+    "isComplete": false
+  },
+  {
+    "name": "Sky Lotus",
+    "minimumLevel": 80,
+    "startingNPC": "Sky Dweller",
+    "requirements": "Complete Sky Dweller, 25 gold, Skyblade",
+    "isComplete": false
+  },
+  {
+    "name": "Mystic Tome",
+    "minimumLevel": 120,
+    "startingNPC": "Eldest Matchmaker",
+    "requirements": "",
+    "isComplete": false
+  },
+  {
+    "name": "Precious",
+    "minimumLevel": 0,
+    "startingNPC": "Jadeon Founder",
+    "requirements": "",
+    "isComplete": false
+  },
+  {
+    "name": "Treasure",
+    "minimumLevel": 60,
+    "startingNPC": "Isamu",
+    "requirements": "15 gold",
+    "isComplete": false
+  },
+  {
+    "name": "Alliance Career",
+    "minimumLevel": 50,
+    "startingNPC": "Alliance Master",
+    "requirements": "20 gold",
+    "isComplete": false
+  },
+  {
+    "name": "Taichi Pills",
+    "minimumLevel": 100,
+    "startingNPC": "Heshanti",
+    "requirements": "20 gold",
+    "isComplete": false
+  },
+  {
+    "name": "The Donation",
+    "minimumLevel": 120,
+    "startingNPC": "Nura",
+    "requirements": "15 gold",
+    "isComplete": false
+  },
+  {
+    "name": "Flameagle Order",
+    "minimumLevel": 0,
+    "startingNPC": "Faction Representative",
+    "requirements": "At least 5 milion faction reputation",
+    "isComplete": false
+  },
+  {
+    "name": "Celestial Trial",
+    "minimumLevel": 60,
+    "startingNPC": "Guardian Saith",
+    "requirements": "",
+    "isComplete": false
+  },
+  {
+    "name": "Mysterious Pills",
+    "minimumLevel": 30,
+    "startingNPC": "Stashkeep Rubo",
+    "requirements": "50 Universal Coin",
+    "isComplete": false
+  },
+  {
+    "name": "Deity In The Wind",
+    "minimumLevel": 90,
+    "startingNPC": "Unknown Scholar",
+    "requirements": "10 gold",
+    "isComplete": false
+  },
+  {
+    "name": "Surfing Deity",
+    "minimumLevel": 45,
+    "startingNPC": "Unknown Scholar",
+    "requirements": "10 gold",
+    "isComplete": false
+  },
+  {
+    "name": "Treasure Hunt",
+    "minimumLevel": 60,
+    "startingNPC": "Sky Dweller",
+    "requirements": "Skyblade",
+    "isComplete": false
+  },
+  {
+    "name": "Crimson Peak",
+    "minimumLevel": 60,
+    "startingNPC": "Instance",
+    "requirements": "",
+    "isComplete": false
+  },
+  {
+    "name": "Moontop Hollow",
+    "minimumLevel": 45,
+    "startingNPC": "Instance",
+    "requirements": "",
+    "isComplete": false
+  },
+  {
+    "name": "Shura Emperor",
+    "minimumLevel": 135,
+    "startingNPC": "Master Jadeon",
+    "requirements": "Shura Plot Complete",
+    "isComplete": false
+  }
+]
