@@ -25,7 +25,7 @@ const withDB = async (serverListener) => {
       }
     });
   } catch (error) {
-    console.error('Error connecting to mongo: ', err);
+    console.error('Error connecting to mongo: ', error);
   }
 };
 
