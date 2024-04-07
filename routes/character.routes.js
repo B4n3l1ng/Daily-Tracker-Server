@@ -31,7 +31,6 @@ router.get('/:characterId', isAuthenticated, async (req, res) => {
 router.post('/', isAuthenticated, async (req, res) => {
   const { name } = req.body;
   const level = Number(req.body.level);
-  console.log(typeof level);
   const availableQuests = [];
   if (!name || !level) {
     res.status(400).json('Missing information');
@@ -76,7 +75,6 @@ router.put('/:characterId/quest/:questuid', isAuthenticated, async (req, res) =>
     questToUpdate.isComplete = req.body.isComplete;
 
     await character.save();
-    console.log(character);
     res.status(202).json(character);
   } catch (error) {
     console.log(error);

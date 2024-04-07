@@ -1,9 +1,12 @@
+require('dotenv').config();
 const questsData = require('./quests.json');
 /* questsData.forEach((quest) => {
   if (!quest.requirements) {
     console.log(quest);
   }
 }); */
+
+console.log(process.env.MONGODB_URI);
 
 const withDB = require('./db');
 
