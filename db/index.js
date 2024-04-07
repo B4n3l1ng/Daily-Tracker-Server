@@ -2,10 +2,8 @@
 // https://www.npmjs.com/package/mongoose
 const mongoose = require('mongoose');
 const cron = require('node-cron');
-const moment = require('moment-timezone');
 // Set the desired timezone for your application
-const desiredTimezone = 'Europe/London';
-moment.tz.setDefault(desiredTimezone);
+
 const Character = require('../models/Character.model');
 
 // ℹ️ Sets the MongoDB URI for our app to have access to it.
@@ -20,7 +18,7 @@ const withDB = async (serverListener) => {
     if (typeof serverListener === 'function') {
       serverListener();
     }
-    cron.schedule('0 16 * * *', async () => {
+    cron.schedule('10 15 * * *', async () => {
       try {
         await Character.updateMany({}, { $set: { 'availableQuests.$[].isComplete': false } });
         console.log('Quests reset successfully');
