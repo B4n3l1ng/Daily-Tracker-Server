@@ -20,7 +20,7 @@ const withDB = async (serverListener) => {
     if (typeof serverListener === 'function') {
       serverListener();
     }
-    cron.schedule('0 0 * * *', async () => {
+    cron.schedule('0 16 * * *', async () => {
       try {
         await Character.updateMany({}, { $set: { 'availableQuests.$[].isComplete': false } });
         console.log('Quests reset successfully');
