@@ -154,7 +154,7 @@
     "isComplete": false
   },
   {
-    "name": "Treasure Hunt",
+    "name": "Treasure Hunt x3",
     "minimumLevel": 60,
     "startingNPC": "Sky Dweller",
     "requirements": "Skyblade",
@@ -179,6 +179,27 @@
     "minimumLevel": 135,
     "startingNPC": "Master Jadeon",
     "requirements": "Shura Plot Complete",
+    "isComplete": false
+  },
+  {
+    "name": "Taichi Pills [Event]",
+    "minimumLevel": 80,
+    "startingNPC": "Bopu the Aeon",
+    "requirements": "19:30-21:30 server time",
+    "isComplete": false
+  },
+  {
+    "name": "Crisis",
+    "minimumLevel": 75,
+    "startingNPC": "Anan",
+    "requirements": "18:00-20:00 server time",
+    "isComplete": false
+  },
+  {
+    "name": "Nura's Gift",
+    "minimumLevel": 60,
+    "startingNPC": "Nura",
+    "requirements": "",
     "isComplete": false
   }
 ]

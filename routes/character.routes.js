@@ -85,7 +85,6 @@ router.put('/:characterId/quest/:questuid', isAuthenticated, async (req, res) =>
 router.put('/:characterId/levelUp', isAuthenticated, async (req, res) => {
   const { characterId } = req.params;
   const { userId } = req.tokenPayload;
-  const { level } = req.body;
 
   try {
     const character = await Character.findById(characterId);
@@ -95,15 +94,16 @@ router.put('/:characterId/levelUp', isAuthenticated, async (req, res) => {
     if (character.player.toString() !== userId) {
       return res.status(403).json({ message: 'Unauthorized' });
     }
-    character.level = level;
-    const questsToAdd = await Quest.find({ minimumLevel: { $lte: Number(level) } });
+    const newLevel = character.level + 1;
+    character.level = newLevel;
+    const questsToAdd = await Quest.find({ minimumLevel: { $lte: Number(newLevel) } });
     const availableQuests = [];
     questsToAdd.forEach((quest) => {
       const previousState = character.availableQuests.find((state) => state.uid === quest.name.split(' ').join(''));
       const copy = quest._doc;
       delete copy._id;
       copy.uid = copy.name.split(' ').join('');
-      if (previousState.isComplete) {
+      if (previousState && previousState.isComplete) {
         copy.isComplete = true;
       }
       availableQuests.push(copy);
@@ -125,6 +125,18 @@ router.delete('/:characterId', isAuthenticated, async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: error.message });
+  }
+});
+
+router.put('/:characterId/questReset', isAuthenticated, async (req, res) => {
+  try {
+    const { characterId } = req.params;
+    const character = await Character.findByIdAndUpdate(characterId, { $set: { 'availableQuests.$[].isComplete': false } }, { new: true });
+    console.log(character.availableQuests);
+    res.status(202).json({ message: 'Character updated!' });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: 'Internal Server Error' });
   }
 });
 
