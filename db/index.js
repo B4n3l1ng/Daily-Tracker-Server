@@ -18,14 +18,6 @@ const withDB = async (serverListener) => {
     if (typeof serverListener === 'function') {
       serverListener();
     }
-    cron.schedule('0 0 * * *', async () => {
-      try {
-        await Character.updateMany({}, { $set: { 'availableQuests.$[].isComplete': false } });
-        console.log('Quests reset successfully');
-      } catch (error) {
-        console.log('Error reseting quests:', error);
-      }
-    });
   } catch (error) {
     console.error('Error connecting to mongo: ', error);
   }

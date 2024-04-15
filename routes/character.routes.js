@@ -22,6 +22,21 @@ router.get('/:characterId', isAuthenticated, async (req, res) => {
   const { characterId } = req.params;
   try {
     const character = await Character.findById(characterId);
+    const level = character.level;
+    const questsToAdd = await Quest.find({ minimumLevel: { $lte: Number(level) } });
+    const availableQuests = [];
+    questsToAdd.forEach((quest) => {
+      const previousState = character.availableQuests.find((state) => state.uid === quest.name.split(' ').join(''));
+      const copy = quest._doc;
+      delete copy._id;
+      copy.uid = copy.name.split(' ').join('');
+      if (previousState && previousState.isComplete) {
+        copy.isComplete = true;
+      }
+      availableQuests.push(copy);
+    });
+    character.availableQuests = availableQuests;
+    const updatedCharacter = await character.save();
     res.status(200).json(character);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -132,7 +147,6 @@ router.put('/:characterId/questReset', isAuthenticated, async (req, res) => {
   try {
     const { characterId } = req.params;
     const character = await Character.findByIdAndUpdate(characterId, { $set: { 'availableQuests.$[].isComplete': false } }, { new: true });
-    console.log(character.availableQuests);
     res.status(202).json({ message: 'Character updated!' });
   } catch (error) {
     console.log(error);
