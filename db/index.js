@@ -1,7 +1,6 @@
 // ℹ️ package responsible to make the connection with mongodb
 // https://www.npmjs.com/package/mongoose
 const mongoose = require('mongoose');
-const cron = require('node-cron');
 // Set the desired timezone for your application
 
 const Character = require('../models/Character.model');

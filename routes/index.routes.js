@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const Character = require('../models/Character.model');
+const Quest = require('../models/Quest.model');
 
 router.get('/', (req, res) => {
   res.json('All good in here');
