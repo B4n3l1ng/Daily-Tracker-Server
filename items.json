@@ -1,0 +1,239 @@
+[
+  {
+    "type": "Charm Part",
+    "itemName": "Challenger",
+    "faction": "Mage",
+    "charmPartType": "Metal",
+    "donatedBy": ["Eunice"],
+    "quantity": 12
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Challenger",
+    "faction": "Mage",
+    "charmPartType": "Wood",
+    "donatedBy": ["Eunice"],
+    "quantity": 6
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Challenger",
+    "faction": "Mage",
+    "charmPartType": "Water",
+    "donatedBy": ["Eunice"],
+    "quantity": 10
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Challenger",
+    "faction": "Mage",
+    "charmPartType": "Fire",
+    "donatedBy": ["Eunice"],
+    "quantity": 9
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Drawn",
+    "faction": "Mage",
+    "charmPartType": "Metal",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Drawn",
+    "faction": "Mage",
+    "charmPartType": "Wood",
+    "donatedBy": ["Eunice"],
+    "quantity": 2
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Drawn",
+    "faction": "Mage",
+    "charmPartType": "Water",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Dry Wing",
+    "faction": "Mage",
+    "charmPartType": "Metal",
+    "donatedBy": ["Eunice"],
+    "quantity": 6
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Dry Wing",
+    "faction": "Mage",
+    "charmPartType": "Wood",
+    "donatedBy": ["Eunice"],
+    "quantity": 11
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Dry Wing",
+    "faction": "Mage",
+    "charmPartType": "Water",
+    "donatedBy": ["Eunice"],
+    "quantity": 5
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Dry Wing",
+    "faction": "Mage",
+    "charmPartType": "Fire",
+    "donatedBy": ["Eunice"],
+    "quantity": 5
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Duckweed",
+    "faction": "Mage",
+    "charmPartType": "Metal",
+    "donatedBy": ["Eunice"],
+    "quantity": 5
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Duckweed",
+    "faction": "Mage",
+    "charmPartType": "Wood",
+    "donatedBy": ["Eunice"],
+    "quantity": 5
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Duckweed",
+    "faction": "Mage",
+    "charmPartType": "Fire",
+    "donatedBy": ["Eunice"],
+    "quantity": 3
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Whistling",
+    "faction": "Mage",
+    "charmPartType": "Metal",
+    "donatedBy": ["Eunice"],
+    "quantity": 17
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Whistling",
+    "faction": "Mage",
+    "charmPartType": "Wood",
+    "donatedBy": ["Eunice"],
+    "quantity": 11
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Whistling",
+    "faction": "Mage",
+    "charmPartType": "Fire",
+    "donatedBy": ["Eunice"],
+    "quantity": 8
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Whistling",
+    "faction": "Mage",
+    "charmPartType": "Water",
+    "donatedBy": ["Eunice"],
+    "quantity": 7
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Blazing",
+    "faction": "Mage",
+    "charmPartType": "Wood",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Chaos",
+    "faction": "Mage",
+    "charmPartType": "Fire",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Chaos",
+    "faction": "Mage",
+    "charmPartType": "Earth",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Spiritual Comsuption",
+    "faction": "Modo",
+    "charmPartType": "Water",
+    "donatedBy": ["Eunice"],
+    "quantity": 3
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Spirit Wings",
+    "faction": "Modo",
+    "charmPartType": "Water",
+    "donatedBy": ["Eunice"],
+    "quantity": 3
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Leech",
+    "faction": "Modo",
+    "charmPartType": "Water",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Bloodstained Oath",
+    "faction": "Modo",
+    "charmPartType": "Water",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Ghoulish Conscription",
+    "faction": "Modo",
+    "charmPartType": "Water",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Leech",
+    "faction": "Modo",
+    "charmPartType": "Earth",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Haunting Mood",
+    "faction": "Modo",
+    "charmPartType": "Earth",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  {
+    "type": "Charm Part",
+    "itemName": "Ghoulish Conscription",
+    "faction": "Modo",
+    "charmPartType": "Earth",
+    "donatedBy": ["Eunice"],
+    "quantity": 1
+  },
+  { "type": "Cosmetic", "itemName": "Duowings", "donatedBy": "Khael", "quantity": 2 },
+  { "type": "Consumables/Miscleaneous", "itemName": "Welkin Red Jade", "donatedBy": "Khael", "quantity": 77 },
+  { "type": "Pet", "itemName": "Chromawing", "donatedBy": "Khael", "quantity": 1 },
+  { "type": "Pet", "itemName": "Dystinor", "donatedBy": "Khael", "quantity": 1 },
+  { "type": "Consumables/Miscleaneous", "itemName": "Ring of Eloquence Recipe", "donatedBy": "Khael", "quantity": 1 }
+]

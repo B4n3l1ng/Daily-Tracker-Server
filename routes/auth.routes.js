@@ -32,10 +32,14 @@ router.post('/login', async (req, res) => {
       // Compare passwords
       const passwordCorrect = bcrypt.compareSync(password, potentialUser.hashedPassword);
       if (passwordCorrect) {
-        const authToken = jwt.sign({ userId: potentialUser._id }, process.env.TOKEN_SECRET, {
-          algorithm: 'HS256',
-          expiresIn: '6h',
-        });
+        const authToken = jwt.sign(
+          { userId: potentialUser._id, isAdmin: potentialUser.isAdmin ? potentialUser.isAdmin : false },
+          process.env.TOKEN_SECRET,
+          {
+            algorithm: 'HS256',
+            expiresIn: '6h',
+          }
+        );
         res.status(200).json({ token: authToken });
       } else {
         // Incorrect password
@@ -54,7 +58,10 @@ router.post('/login', async (req, res) => {
 
 router.get('/verify', isAuthenticated, async (req, res) => {
   const currentUser = await User.findById(req.tokenPayload.userId);
-  res.status(200).json(currentUser);
+  const copy = currentUser._doc;
+  delete copy.hashedPassword;
+  console.log(copy);
+  res.status(200).json(copy);
 });
 
 module.exports = router;
