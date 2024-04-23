@@ -13,8 +13,9 @@ const itemSchema = new Schema({
     enum: ['Water', 'Fire', 'Wood', 'Metal', 'Earth'],
   },
   itemName: { type: String, required: true, trim: true },
-  donatedBy: [{ type: String, required: true, trim: true }],
+  donatedBy: [{ type: String, trim: true }],
   quantity: { type: Number, required: true, min: 1 },
+  stashToon: { type: String, required: true },
 });
 
 const Item = model('Item', itemSchema);

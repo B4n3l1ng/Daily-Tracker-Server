@@ -1,4 +1,5 @@
 const Item = require('../models/Item.model');
+const RemoveItem = require('../models/ItemRemoval.model');
 
 const router = require('express').Router();
 
@@ -52,6 +53,16 @@ router.get('/pet', async (req, res) => {
   }
 });
 
+router.get('/removals', async (req, res) => {
+  try {
+    const allRemovals = await RemoveItem.find();
+    res.status(200).json(allRemovals);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -78,7 +89,7 @@ router.get('/misc', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const { type, faction, charmPartType, itemName, donatedBy, quantity } = req.body;
+  const { type, faction, charmPartType, itemName, donatedBy, quantity, stashToon } = req.body;
   if (type === 'Charm Part') {
     if (!faction || !charmPartType) {
       res.status(400).json('Please provide a faction and a type of part');
@@ -86,7 +97,7 @@ router.post('/', async (req, res) => {
     }
   }
   try {
-    const newItem = await Item.create({ type, faction, charmPartType, itemName, donatedBy, quantity });
+    const newItem = await Item.create({ type, faction, charmPartType, itemName, donatedBy, quantity, stashToon });
     console.log(newItem);
     res.status(201).json(newItem);
   } catch (error) {
@@ -103,8 +114,8 @@ router.put('/:id', async (req, res) => {
       res.status(404).json('Item not found');
       return;
     }
-    const { newQuantity } = req.body;
-    const updated = await Item.findByIdAndUpdate(id, { quantity: newQuantity }, { new: true });
+    const { newQuantity, newDonatedBy } = req.body;
+    const updated = await Item.findByIdAndUpdate(id, { quantity: newQuantity, donatedBy: newDonatedBy }, { new: true });
     res.status(202).json(updated);
   } catch (error) {
     console.log(error);
@@ -124,6 +135,32 @@ router.delete('/:id', async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: error.message });
+  }
+});
+
+router.put('/:id/giveTo', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const item = await Item.findById(id);
+    if (!item) {
+      res.status(404).json('Item not found');
+      return;
+    }
+    const { quantity, player } = req.body;
+    item.quantity -= quantity;
+    const removal = await RemoveItem.create({
+      itemType: item.type,
+      itemFaction: item.faction,
+      itemCharmPartType: item.charmPartType,
+      itemName: item.itemName,
+      quantityRemoved: quantity,
+      removedBy: player,
+    });
+    await item.save();
+    res.status(200).json('Success');
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
   }
 });
 
