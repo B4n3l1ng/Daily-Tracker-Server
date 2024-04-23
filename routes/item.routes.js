@@ -114,8 +114,8 @@ router.put('/:id', async (req, res) => {
       res.status(404).json('Item not found');
       return;
     }
-    const { newQuantity, newDonatedBy } = req.body;
-    const updated = await Item.findByIdAndUpdate(id, { quantity: newQuantity, donatedBy: newDonatedBy }, { new: true });
+    const { newQuantity, newDonatedBy, newStashToon } = req.body;
+    const updated = await Item.findByIdAndUpdate(id, { quantity: newQuantity, donatedBy: newDonatedBy, stashToon: newStashToon }, { new: true });
     res.status(202).json(updated);
   } catch (error) {
     console.log(error);
