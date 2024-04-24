@@ -132,7 +132,7 @@ router.put('/:characterId/levelUp', isAuthenticated, async (req, res) => {
   }
 });
 
-router.put('/:characterId/ascend', async (req, res) => {
+router.put('/:characterId/ascend', isAuthenticated, async (req, res) => {
   try {
     const { characterId } = req.params;
     const { userId } = req.tokenPayload;
@@ -143,9 +143,8 @@ router.put('/:characterId/ascend', async (req, res) => {
     if (character.player.toString() !== userId) {
       return res.status(403).json({ message: 'Unauthorized' });
     }
-
     character.level = 15;
-    const questsToAdd = await Quest.find({ minimumLevel: { $lte: Number(newLevel) } });
+    const questsToAdd = await Quest.find({ minimumLevel: { $lte: Number(15) } });
     const availableQuests = [];
     questsToAdd.forEach((quest) => {
       const previousState = character.availableQuests.find((state) => state.uid === quest.name.split(' ').join(''));
