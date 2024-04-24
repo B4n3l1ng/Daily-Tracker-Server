@@ -132,6 +132,40 @@ router.put('/:characterId/levelUp', isAuthenticated, async (req, res) => {
   }
 });
 
+router.put('/:characterId/ascend', async (req, res) => {
+  try {
+    const { characterId } = req.params;
+    const { userId } = req.tokenPayload;
+    const character = await Character.findById(characterId);
+    if (!character) {
+      return res.status(404).json({ message: 'Character not found' });
+    }
+    if (character.player.toString() !== userId) {
+      return res.status(403).json({ message: 'Unauthorized' });
+    }
+
+    character.level = 15;
+    const questsToAdd = await Quest.find({ minimumLevel: { $lte: Number(newLevel) } });
+    const availableQuests = [];
+    questsToAdd.forEach((quest) => {
+      const previousState = character.availableQuests.find((state) => state.uid === quest.name.split(' ').join(''));
+      const copy = quest._doc;
+      delete copy._id;
+      copy.uid = copy.name.split(' ').join('');
+      if (previousState && previousState.isComplete) {
+        copy.isComplete = true;
+      }
+      availableQuests.push(copy);
+    });
+    character.availableQuests = availableQuests;
+    await character.save();
+    res.status(202).json(character);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json('Internal Server Error');
+  }
+});
+
 router.delete('/:characterId', isAuthenticated, async (req, res) => {
   try {
     const { characterId } = req.params;
