@@ -23,6 +23,6 @@ const itemData = require('./items.json');
 
 const Item = require('./models/Item.model');
 
-Item.insertMany(itemData)
-  .then((data) => console.log(data))
+Item.deleteMany()
+  .then(Item.insertMany(itemData).then((data) => console.log(data)))
   .catch((error) => console.log(error));

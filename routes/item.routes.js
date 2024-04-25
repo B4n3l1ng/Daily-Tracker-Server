@@ -13,53 +13,26 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/charms', async (req, res) => {
-  try {
-    const allCharms = await Item.find({ type: 'Charm Part' });
-    res.status(200).json(allCharms);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: error.message });
-  }
-});
-
-router.get('/cosmetic', async (req, res) => {
-  try {
-    const allCosmetics = await Item.find({ type: 'Cosmetic' });
-    res.status(200).json(allCosmetics);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: error.message });
-  }
-});
-
-router.get('/equipment', async (req, res) => {
-  try {
-    const allEquipment = await Item.find({ type: 'Equipment' });
-    res.status(200).json(allEquipment);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: error.message });
-  }
-});
-
-router.get('/pet', async (req, res) => {
-  try {
-    const allPets = await Item.find({ type: 'Pet' });
-    res.status(200).json(allPets);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: error.message });
-  }
-});
-
 router.get('/removals', async (req, res) => {
   try {
     const allRemovals = await RemoveItem.find();
     res.status(200).json(allRemovals);
   } catch (error) {
     console.log(error);
-    res.status(500).json(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+router.get('/query', async (req, res) => {
+  try {
+    const { t } = req.query;
+    const term = t.split('-').join(' ');
+    const items = await Item.find({ type: term });
+    console.log(items);
+    res.status(200).json(items);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
@@ -160,7 +133,7 @@ router.put('/:id/giveTo', async (req, res) => {
     res.status(200).json('Success');
   } catch (error) {
     console.log(error);
-    res.status(500).json(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
