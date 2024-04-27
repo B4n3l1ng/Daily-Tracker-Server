@@ -6,6 +6,7 @@ const questSchema = new Schema({
   startingNPC: { type: String, required: true },
   requirements: { type: String, default: '' },
   isComplete: { type: Boolean, default: false },
+  rewards: [{ type: String }],
 });
 
 const Quest = model('Quest', questSchema);

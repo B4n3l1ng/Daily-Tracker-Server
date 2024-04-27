@@ -15,7 +15,11 @@ router.post('/signup', async (req, res) => {
     const salt = bcrypt.genSaltSync(13);
     const hashedPassword = bcrypt.hashSync(req.body.password, salt);
     const createdUser = await User.create({ username: req.body.username, hashedPassword });
-    const authToken = jwt.sign({ userId: createdUser._id }, process.env.TOKEN_SECRET, { algorithm: 'HS256', expiresIn: '24h' });
+    const options = { algorithm: 'HS256' };
+    if (!req.body.stayLoggedIn) {
+      options.expiresIn = '6h';
+    }
+    const authToken = jwt.sign({ userId: createdUser._id }, process.env.TOKEN_SECRET, options);
     res.status(201).json({ token: authToken });
   } catch (error) {
     console.log(error);
@@ -24,21 +28,23 @@ router.post('/signup', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, stayLoggedIn } = req.body;
   try {
     const potentialUser = await User.findOne({ username });
     if (potentialUser) {
       // User does exist
       // Compare passwords
       const passwordCorrect = bcrypt.compareSync(password, potentialUser.hashedPassword);
+
       if (passwordCorrect) {
+        const options = { algorithm: 'HS256' };
+        if (!stayLoggedIn) {
+          options.expiresIn = '6h';
+        }
         const authToken = jwt.sign(
           { userId: potentialUser._id, isAdmin: potentialUser.isAdmin ? potentialUser.isAdmin : false },
           process.env.TOKEN_SECRET,
-          {
-            algorithm: 'HS256',
-            expiresIn: '6h',
-          }
+          options
         );
         res.status(200).json({ token: authToken });
       } else {

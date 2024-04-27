@@ -37,14 +37,15 @@ router.get('/:characterId', isAuthenticated, async (req, res) => {
     });
     character.availableQuests = availableQuests;
     const updatedCharacter = await character.save();
-    res.status(200).json(character);
+    res.status(200).json(updatedCharacter);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
 router.post('/', isAuthenticated, async (req, res) => {
-  const { name } = req.body;
+  const { name, isAscended } = req.body;
+  console.log(isAscended);
   const level = Number(req.body.level);
   const availableQuests = [];
   if (!name || !level) {
@@ -62,7 +63,7 @@ router.post('/', isAuthenticated, async (req, res) => {
         availableQuests.push(copy);
       });
     }
-    const createdCharacter = await Character.create({ name, level, availableQuests, player: req.tokenPayload.userId });
+    const createdCharacter = await Character.create({ name, level, availableQuests, player: req.tokenPayload.userId, isAscended });
     res.status(201).json(createdCharacter);
   } catch (error) {
     console.log(error);
@@ -157,6 +158,7 @@ router.put('/:characterId/ascend', isAuthenticated, async (req, res) => {
       availableQuests.push(copy);
     });
     character.availableQuests = availableQuests;
+    character.isAscended = true;
     await character.save();
     res.status(202).json(character);
   } catch (error) {

@@ -14,6 +14,7 @@ const characterSchema = new Schema({
     },
   ],
   player: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+  isAscended: { type: Boolean, default: false },
 });
 
 const Character = model('Character', characterSchema);

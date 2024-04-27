@@ -4,202 +4,255 @@
     "minimumLevel": 80,
     "startingNPC": "Tanis Ka",
     "requirements": "",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["Multiple rewards possible"]
   },
   {
     "name": "Vile Spirits",
     "minimumLevel": 30,
     "startingNPC": "Faction Herald",
     "requirements": "",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["300 Taichi Pills", "300 Affinity Bead", "100k faction honor"]
   },
   {
     "name": "Dispel The Curse",
     "minimumLevel": 30,
     "startingNPC": "Special Ops Agent",
     "requirements": "",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["180 Taichi Pills"]
   },
   {
     "name": "Celestial Mount",
     "minimumLevel": 60,
     "startingNPC": "Wonderland Fair",
     "requirements": "Fair Ticket",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Golden Touch",
     "minimumLevel": 60,
     "startingNPC": "Wonderland Fair",
     "requirements": "Fair Ticket",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Getting Home",
     "minimumLevel": 60,
     "startingNPC": "Wonderland Fair",
     "requirements": "Fair Ticket",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Stolen Gold",
     "minimumLevel": 120,
     "startingNPC": "Wonderland Fair",
     "requirements": "Fair Ticket",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Rock Paper Scissors",
     "minimumLevel": 120,
     "startingNPC": "Wonderland Fair",
     "requirements": "Fair Ticket",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Missing Yasho",
     "minimumLevel": 120,
     "startingNPC": "Wonderland Fair",
     "requirements": "Fair Ticket",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Sky Dweller",
     "minimumLevel": 45,
     "startingNPC": "Sky Dweller",
     "requirements": "Skyblade",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Sky Lotus",
     "minimumLevel": 80,
     "startingNPC": "Sky Dweller",
     "requirements": "Complete Sky Dweller, 25 gold, Skyblade",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Mystic Tome",
     "minimumLevel": 120,
     "startingNPC": "Eldest Matchmaker",
     "requirements": "",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Precious",
     "minimumLevel": 0,
     "startingNPC": "Jadeon Founder",
     "requirements": "",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["180 Taichi Pills", "Multiple rewards possible"]
   },
   {
     "name": "Treasure",
     "minimumLevel": 60,
     "startingNPC": "Isamu",
     "requirements": "15 gold",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Alliance Career",
     "minimumLevel": 50,
     "startingNPC": "Alliance Master",
     "requirements": "20 gold",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Taichi Pills",
     "minimumLevel": 100,
     "startingNPC": "Heshanti",
     "requirements": "20 gold",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "The Donation",
     "minimumLevel": 120,
     "startingNPC": "Nura",
     "requirements": "15 gold",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Flameagle Order",
     "minimumLevel": 0,
     "startingNPC": "Faction Representative",
     "requirements": "At least 5 milion faction reputation",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["Taichi Pills"]
   },
   {
-    "name": "Celestial Trial",
+    "name": "Celestial Trial x2",
     "minimumLevel": 60,
     "startingNPC": "Guardian Saith",
     "requirements": "",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Mysterious Pills",
     "minimumLevel": 30,
     "startingNPC": "Stashkeep Rubo",
     "requirements": "50 Universal Coin",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Deity In The Wind",
     "minimumLevel": 90,
     "startingNPC": "Unknown Scholar",
     "requirements": "10 gold",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["At least 200 Taichi Pills"]
   },
   {
     "name": "Surfing Deity",
     "minimumLevel": 45,
     "startingNPC": "Unknown Scholar",
     "requirements": "10 gold",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["At least 200 Taichi Pills"]
   },
   {
     "name": "Treasure Hunt x3",
     "minimumLevel": 60,
     "startingNPC": "Sky Dweller",
     "requirements": "Skyblade",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["Gold"]
   },
   {
     "name": "Crimson Peak",
     "minimumLevel": 60,
     "startingNPC": "Instance",
     "requirements": "",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["Taichi Pills", "Possible Kirin Sigil Shard", "Affinity Beads", "Chroma Beads"]
   },
   {
     "name": "Moontop Hollow",
     "minimumLevel": 45,
     "startingNPC": "Instance",
     "requirements": "",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["500 Taichi Pills with Voucher, 60 without", "Affinity Beads", "Chroma Beads"]
   },
   {
     "name": "Shura Emperor",
     "minimumLevel": 135,
     "startingNPC": "Master Jadeon",
     "requirements": "Shura Plot Complete",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["150 Taichi Pills"]
   },
   {
     "name": "Taichi Pills [Event]",
     "minimumLevel": 80,
     "startingNPC": "Bopu the Aeon",
     "requirements": "19:30-21:30 server time",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": []
   },
   {
     "name": "Crisis",
     "minimumLevel": 75,
     "startingNPC": "Anan",
     "requirements": "18:00-20:00 server time",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["300 Taichi Pills"]
   },
   {
     "name": "Nura's Gift",
     "minimumLevel": 60,
     "startingNPC": "Nura",
     "requirements": "",
-    "isComplete": false
+    "isComplete": false,
+    "rewards": ["Dragonfang Herb"]
+  },
+  {
+    "name": "Exploring the Scroll",
+    "minimumLevel": 30,
+    "startingNPC": "Harmony Scroll",
+    "requirements": "",
+    "isComplete": false,
+    "rewards": ["80 Taichi Pills", " 150 Affinity Bead", "Expedition Pack"]
+  },
+  {
+    "name": "Turning Beans",
+    "minimumLevel": 120,
+    "startingNPC": "Sun and Moon Dragon Lord",
+    "requirements": "",
+    "isComplete": false,
+    "rewards": ["100 Taichi Pills", "Meditation Orb", "20 Sun Bead"]
+  },
+  {
+    "name": "Bratty Princess",
+    "minimumLevel": "135",
+    "requirements": "",
+    "startingNPC": "Sun and Moon Dragon Lord",
+    "isComplete": false,
+    "rewards": ["80 Taichi Pills", "Dragonlord Box"]
   }
 ]
