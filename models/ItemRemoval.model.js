@@ -17,7 +17,8 @@ const removalSchema = new Schema({
   },
   itemName: { type: String, required: true, trim: true },
   quantityRemoved: { type: Number, min: 1, required: true },
-  removedBy: { type: String, required: true },
+  givenTo: { type: String, required: true },
+  removedBy: { type: Schema.Types.ObjectId, ref: 'User' },
 });
 
 const RemoveItem = model('RemoveItem', removalSchema);

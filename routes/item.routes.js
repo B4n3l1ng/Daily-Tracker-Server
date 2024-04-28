@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
 router.get('/removals', async (req, res) => {
   try {
-    const allRemovals = await RemoveItem.find();
+    const allRemovals = await RemoveItem.find().populate('removedBy');
     res.status(200).json(allRemovals);
   } catch (error) {
     console.log(error);
@@ -131,7 +131,8 @@ router.put('/:id/giveTo', async (req, res) => {
       itemCharmPartType: item.charmPartType,
       itemName: item.itemName,
       quantityRemoved: quantity,
-      removedBy: player,
+      givenTo: player,
+      removedBy: req.tokenPayload.userId,
     });
     await item.save();
     res.status(200).json('Success');

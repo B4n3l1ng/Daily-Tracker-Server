@@ -19,7 +19,11 @@ router.post('/signup', async (req, res) => {
     if (!req.body.stayLoggedIn) {
       options.expiresIn = '6h';
     }
-    const authToken = jwt.sign({ userId: createdUser._id }, process.env.TOKEN_SECRET, options);
+    const authToken = jwt.sign(
+      { userId: createdUser._id, isAdmin: potentialUser.isAdmin ? potentialUser.isAdmin : false },
+      process.env.TOKEN_SECRET,
+      options
+    );
     res.status(201).json({ token: authToken });
   } catch (error) {
     console.log(error);
