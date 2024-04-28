@@ -14,7 +14,7 @@ const itemSchema = new Schema({
   },
   itemName: { type: String, required: true, trim: true },
   donatedBy: [{ type: String, trim: true }],
-  quantity: { type: Number, required: true, min: 1 },
+  quantity: { type: Number, required: true, min: 0 },
   stashToon: { type: String, required: true },
 });
 
