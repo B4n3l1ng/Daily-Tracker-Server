@@ -71,7 +71,6 @@ router.post('/', async (req, res) => {
   }
   try {
     const newItem = await Item.create({ type, faction, charmPartType, itemName, donatedBy, quantity, stashToon });
-    console.log(newItem);
     res.status(201).json(newItem);
   } catch (error) {
     console.log(error);

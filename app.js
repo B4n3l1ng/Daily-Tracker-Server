@@ -25,6 +25,9 @@ app.use('/api/characters', characterRoutes);
 const itemRoutes = require('./routes/item.routes');
 app.use('/api/items', isAuthenticated, itemRoutes);
 
+const userRoutes = require('./routes/user.routes');
+app.use('/api/users', userRoutes);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app);
 

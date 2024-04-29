@@ -45,7 +45,6 @@ router.get('/:characterId', isAuthenticated, async (req, res) => {
 
 router.post('/', isAuthenticated, async (req, res) => {
   const { name, isAscended } = req.body;
-  console.log(isAscended);
   const level = Number(req.body.level);
   const availableQuests = [];
   if (!name || !level) {

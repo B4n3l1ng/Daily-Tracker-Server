@@ -20,7 +20,7 @@ router.post('/signup', async (req, res) => {
       options.expiresIn = '6h';
     }
     const authToken = jwt.sign(
-      { userId: createdUser._id, isAdmin: potentialUser.isAdmin ? potentialUser.isAdmin : false },
+      { userId: createdUser._id, isAdmin: createdUser.isAdmin ? potentialUser.isAdmin : false },
       process.env.TOKEN_SECRET,
       options
     );
