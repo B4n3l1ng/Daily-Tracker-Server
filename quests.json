@@ -240,12 +240,12 @@
     "rewards": ["80 Taichi Pills", " 150 Affinity Bead", "Expedition Pack"]
   },
   {
-    "name": "Turning Beans",
+    "name": "Corrupted Forges",
     "minimumLevel": 120,
     "startingNPC": "Sun and Moon Dragon Lord",
     "requirements": "",
     "isComplete": false,
-    "rewards": ["100 Taichi Pills", "Meditation Orb", "20 Sun Bead"]
+    "rewards": ["500 Taichi Pills", "2 of each Charm Beads", "50 Treasure Bowls", "3 common orb beads", "small chance for kirin sigil"]
   },
   {
     "name": "Bratty Princess",

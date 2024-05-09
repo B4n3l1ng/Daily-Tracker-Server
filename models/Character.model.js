@@ -10,6 +10,7 @@ const characterSchema = new Schema({
       startingNPC: { type: String, required: true },
       requirements: { type: String, default: '' },
       isComplete: { type: Boolean, default: false },
+      rewards: [String],
       uid: { type: String, required: true },
     },
   ],
